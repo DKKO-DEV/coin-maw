@@ -16,4 +16,4 @@ env/
 .DS_Score
 
 #Other
-*.dbas
+*.db
