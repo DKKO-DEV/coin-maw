@@ -15,7 +15,7 @@ def transform_data(raw_data: List[Dict[str, Any]]) -> Tuple[List[Tuple], List[Tu
         symbol = coin.get("symbol", None)
         asset_name = coin.get("name", None)
 
-        if not coin_id or not symbol or not asset_name: # NOT NULL on the schema
+        if not coin_id or not symbol or not asset_name: # is NOT NULL on the schema
             print(f"Skipping coin due to incomplete data: {coin}") 
             continue
 
