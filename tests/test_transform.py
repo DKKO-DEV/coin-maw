@@ -40,7 +40,7 @@ class TestJsonTransformer(unittest.TestCase):
         assets, markets = transform_data(data)
 
         self.assertEqual(len(assets), 0)
-
+        self.assertEqual(len(markets), 0)
         
 
     def test_invalid_data_missing_price(self):
@@ -57,7 +57,7 @@ class TestJsonTransformer(unittest.TestCase):
 
         assets, markets = transform_data(data)
 
-        self.assertEqual(markets[0][1], None)
+        self.assertIsNone(markets[0][1], None)
 
 if __name__ == "__main__":
     unittest.main()
