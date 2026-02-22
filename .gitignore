@@ -4,17 +4,16 @@ test.py
 *.py[cod]
 *$py.class
 
-#Virtual Env.
+#Environments
 .venv/
 venv/
 env/
 .env
 
-# VSCode
+#coin-maw
 .vscode
+*.db
+coinmaw.egg-info
 
 #OS
 .DS_Score
-
-#Other
-*.db
