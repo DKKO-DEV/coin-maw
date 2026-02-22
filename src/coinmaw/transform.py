@@ -11,19 +11,19 @@ def transform_data(raw_data: List[Dict[str, Any]]) -> Tuple[List[Tuple], List[Tu
     for coin in raw_data:
 
         # Extract for assets table
-        coin_id = coin.get("id", None)
-        symbol = coin.get("symbol", None)
-        asset_name = coin.get("name", None)
+        coin_id = coin.get("id")
+        symbol = coin.get("symbol")
+        asset_name = coin.get("name")
 
         if not coin_id or not symbol or not asset_name: # is NOT NULL on the schema
             print(f"Skipping coin due to incomplete data: {coin}") 
             continue
 
         # Extract for market_data table
-        current_price = coin.get("current_price", None)
-        market_cap = coin.get("market_cap", None)
-        trading_volume_24h = coin.get("total_volume", None)
-        captured_at = coin.get("captured_at", None)
+        current_price = coin.get("current_price")
+        market_cap = coin.get("market_cap")
+        trading_volume_24h = coin.get("total_volume")
+        captured_at = coin.get("captured_at")
 
         # Append to the corresponding tuples in onder
         assets_data.append((coin_id, symbol, asset_name))
