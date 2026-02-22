@@ -1,0 +1,12 @@
+[project]
+name = "coinmaw"
+version = "0.0.0"
+description = "small ETS pipeline using CoinGecko demo API"
+dependencies = [
+    "requests>=2.32.5",
+    "python-dotenv",
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
