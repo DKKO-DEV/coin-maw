@@ -1,7 +1,7 @@
 [project]
 name = "coinmaw"
 version = "0.0.0"
-description = "small ETS pipeline using CoinGecko demo API"
+description = "small ETL pipeline using CoinGecko demo API"
 dependencies = [
     "requests>=2.32.5",
     "python-dotenv",
