@@ -1,6 +1,6 @@
 [project]
 name = "coinmaw"
-version = "0.0.0"
+version = "0.0.1"
 description = "small ETL pipeline using CoinGecko demo API"
 dependencies = [
     "requests>=2.32.5",

@@ -1,1 +1,1 @@
-"""Coin-Maw main Scripts"""
+"""Coinmaw main scripts"""

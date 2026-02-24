@@ -1,6 +1,6 @@
 """Tests for transform.py file."""
 
-import unittest
+import unittest 
 from coinmaw.transform import transform_data 
 
 class TestJsonTransformer(unittest.TestCase):
