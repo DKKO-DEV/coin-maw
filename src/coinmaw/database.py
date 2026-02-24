@@ -14,6 +14,7 @@ def initialize_db(db_name: str = "crypto_pipeline.db", schema_file: str ="schema
         with sqlite3.connect(db_name) as conn:
             cursor = conn.cursor()
             cursor.executescript(schema_sql) # Create Tables
+            conn.commit()
             print("Database initialized successfully.")
     except sqlite3.Error as e:
         print(f"Database error: {e}")
