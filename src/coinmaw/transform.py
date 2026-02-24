@@ -34,7 +34,7 @@ def transform_data(raw_data: List[Dict[str, Any]]) -> Tuple[List[Tuple], List[Tu
 
 if __name__ == "__main__":
     # Test Transformation logic
-    from extract import fetch_market_data
+    from coinmaw.extract import fetch_market_data
     try:
         raw_data = fetch_market_data()
     except Exception as e:
