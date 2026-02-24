@@ -1,10 +1,11 @@
 import sqlite3
 from typing import List, Tuple, Any
+from pathlib import Path
 
 def load_data(
         market_data: List[Tuple[Any, Any, Any, Any, Any]],
         assets_data: List[Tuple[Any, Any, Any]],
-        db_name: str = "crypto_pipeline.db"
+        db_file: Path | str = "crypto_pipeline.db"
 ) -> None:
     """Method to upload the market's data into the database using SQLite"""
     INSERT_ASSETS_SQL = """INSERT INTO assets(id, symbol, asset_name)
@@ -14,7 +15,7 @@ def load_data(
     VALUES(?,?,?,?,?)"""
 
     try:
-        with sqlite3.connect(db_name) as conn:
+        with sqlite3.connect(db_file) as conn:
             
             cursor = conn.cursor()
 
@@ -36,7 +37,7 @@ if __name__ == "__main__":
 
     assets, market = transform_data(raw)
     db = "crypto_pipeline.db"
-    # load_data(market_data=market, assets_data=assets, db_name= db)
+    # load_data(market_data=market, assets_data=assets, db_file= db)
 
     # fetch a row.
     try:

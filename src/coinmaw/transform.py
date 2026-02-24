@@ -5,7 +5,7 @@ def transform_data(raw_data: List[Dict[str, Any]]) -> Tuple[List[Tuple], List[Tu
     Separates raw API data into two lists of tuples for the database
     Returns: (assets_data, market_data)
     """
-    assets_data = []
+    assets_data = [] 
     market_data = []
 
     for coin in raw_data:

@@ -11,6 +11,7 @@ COINGECKO_API_KEY = os.getenv("COINGECKO_API_KEY")
 
 def fetch_market_data() -> List[Dict[str, Any]]:
     """Fetch top 50 coins by market cap from Coingecko."""
+    api_data_list = []
 
     headers = {"x-cg-demo-api-key": COINGECKO_API_KEY} if COINGECKO_API_KEY else {}
     query ={

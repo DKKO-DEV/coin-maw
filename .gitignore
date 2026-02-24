@@ -9,7 +9,7 @@ test.py
 venv/
 env/
 .env
-
+ 
 #coin-maw
 .vscode
 *.db

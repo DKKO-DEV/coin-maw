@@ -1,7 +1,8 @@
 import sqlite3
 import os
+from pathlib import Path
 
-def initialize_db(db_name: str = "crypto_pipeline.db", schema_file: str ="schema.sql") -> None:
+def initialize_db(db_name: str = "crypto_pipeline.db", schema_file: Path | str = "src/schema.sql") -> None:
     """Creates the database and tables using the schema file."""
     
     if not os.path.exists(schema_file):

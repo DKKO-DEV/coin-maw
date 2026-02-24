@@ -1,1 +1,1 @@
-"""Tests 4 Coin-Maw"""
+"""Tests 4 Coinmaw"""
